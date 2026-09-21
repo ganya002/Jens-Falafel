@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<meta charset="UTF-8">
+<title>Jens Falafel</title>
+<meta name="description" content="Jens Falafel - hjemmeside under konstruksjon">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <header>
+    <a class="logo" href="#hjem">Jens Falafel</a>
+    <nav>
+      <a href="#meny">Meny</a>
+      <a href="#om">Om oss</a>
+      <a href="#gjestebok">Gjestebok</a>
+      <a href="#login" onclick="return apneLogin();">Logg inn</a>
+    </nav>
+  </header>
+
+  <main id="hjem">
+    <section class="intro">
+      <p class="eyebrow">Falafel i Oslo siden 2000</p>
+      <h1>Enkelt. Ferskt.<br>Falafel.</h1>
+      <p>
+      Vi lager Oslos mest legendariske falafel, servert med kjærlighet siden år 2000!
+      </p>
+    </section>
+
+    <section id="meny">
+      <div class="section-heading">
+        <p class="eyebrow">Meny</p>
+        <h2>Velg din favoritt.</h2>
+      </div>
+
+    <div class="menu-scroll-container">
+      <div class="menu-scroll">
+
+        <div class="menu-card">
+          <span class="emoji">🧆</span>
+          <h3>Klassisk Falafel</h3>
+          <p>Sprø falafel i pitabrød med salat og hvitløksaus.</p>
+          <span class="price-tag">kr 89,-</span>
+        </div>
+
+        <div class="menu-card">
+          <span class="emoji">🌯</span>
+          <h3>Falafel Wrap</h3>
+          <p>Falafel rullet i lompe med tzatziki og syltet rødløk.</p>
+          <span class="price-tag">kr 95,-</span>
+          <p class="nyhet">NYHET!</p>
+        </div>
+
+        <div class="menu-card">
+          <span class="emoji">🥗</span>
+          <h3>Falafelbolle</h3>
+          <p>Falafel over quinoa, hummus og grønnsaker.</p>
+          <span class="price-tag">kr 109,-</span>
+        </div>
+
+        <div class="menu-card">
+          <span class="emoji">🔥</span>
+          <h3>Ekstra Sterk Falafel</h3>
+          <p>For de tøffeste! Habanero-sausen slår hardt.</p>
+          <span class="price-tag">kr 99,-</span>
+        </div>
+
+        <div class="menu-card">
+          <span class="emoji">🥤</span>
+          <h3>Mango Lassi</h3>
+          <p>Kald og deilig drikke til å slukke ilden.</p>
+          <span class="price-tag">kr 39,-</span>
+        </div>
+
+        <div class="menu-card">
+          <span class="emoji">🍩</span>
+          <h3>Zalabia</h3>
+          <p>Søte, sprø dessertboller med sukkersirup.</p>
+          <span class="price-tag">kr 45,-</span>
+          <p class="nyhet">NYHET!</p>
+        </div>
+
+      </div>
+    </div>
+    </section>
+
+    <section id="om">
+    <div class="section-heading">
+      <p class="eyebrow">Om oss</p>
+      <h2>God mat, uten omveier.</h2>
+    </div>
+    <table class="oldschool">
+      <tr><th>Grunnlagt</th><td>År 2000</td></tr>
+      <tr><th>Adresse</th><td>Falafelgata 1, Oslo</td></tr>
+      <tr><th>Åpningstider</th><td>Man-Søn: 11:00 - 22:00</td></tr>
+      <tr><th>Telefon</th><td>700 00 000</td></tr>
+      <tr><th>Spesialitet</th><td>Hemmelig krydderblanding siden 1998</td></tr>
+    </table>
+    </section>
+
+    <section class="guestbook" id="gjestebok">
+      <div class="section-heading">
+        <p class="eyebrow">Gjestebok</p>
+        <h2>Si hei.</h2>
+      </div>
+      <form onsubmit="return leggTilGjest(event);">
+        <label for="gjestNavn">Navn</label>
+        <input type="text" id="gjestNavn" placeholder="Ola Nordmann"><br>
+        <label for="gjestMelding">Melding</label>
+        <textarea id="gjestMelding" rows="3" placeholder="Beste falafelen jeg har smakt!!!"></textarea><br>
+        <button type="submit">Send inn</button>
+      </form>
+
+      <div id="gjestebokListe">
+        <p><strong>Kari, 12.02.2003:</strong> Nam nam, denne falafelen er SÅ god!!! ⭐⭐⭐⭐⭐</p>
+        <p><strong>Per, 03.01.2003:</strong> Beste stedet i byen, kommer tilbake for evig!</p>
+      </div>
+    </section>
+
+    <div class="login-box" id="loginBoks" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">Konto</p>
+        <h2>Logg inn.</h2>
+      </div>
+      <form onsubmit="return sjekkLogin(event);">
+        <input type="text" id="brukernavn" placeholder="Brukernavn"><br>
+        <input type="password" id="passord" placeholder="Passord"><br>
+        <button type="submit">Logg inn</button>
+      </form>
+      <p>Ikke bruker? <a href="#">Registrer deg</a></p>
+    </div>
+
+    <p class="counter-line">
+      Besøkstall:
+      <span class="counter" id="tellerVerdi">000042</span>
+    </p>
+    
+  </main>
+
+  <footer>
+    &copy; 2026 Jens Falafel
+  </footer>
+
+</div>
+</body>
+</html>
